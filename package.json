@@ -1,0 +1,38 @@
+{
+  "name": "scrilio-api",
+  "version": "0.0.1",
+  "description": "scrilio api service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AzidoGroup/scrilio-api.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/AzidoGroup/scrilio-api/issues"
+  },
+  "homepage": "https://github.com/AzidoGroup/scrilio-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.2",
+    "express-mysql-session": "^1.2.3",
+    "express-session": "^1.15.6",
+    "is_js": "^0.9.0",
+    "joi": "^13.0.2",
+    "knex": "^0.14.2",
+    "moment": "^2.19.3",
+    "mysql": "^2.15.0",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-plugin-jsdoc": "^3.2.0"
+  }
+}
