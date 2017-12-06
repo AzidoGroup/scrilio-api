@@ -1,0 +1,28 @@
+{
+  "application": {
+    "auth": {
+      "username": "foo",
+      "password": "bar"
+    },
+    "port": 8091
+  },
+  "api": {
+    "v1": "/api/v1"
+  },
+  "database": {
+    "mysql": {
+      "client": "mysql",
+      "connection": {
+        "database": "scrilio_api",
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "",
+        "port": 3306
+      },
+      "prefix": "core_",
+      "migrations": {
+        "tableName": "migrations"
+      }
+    }
+  }
+}

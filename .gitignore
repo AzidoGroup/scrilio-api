@@ -60,3 +60,5 @@ package-lock.json
 
 # bower installation
 public/vendor
+
+config/config.json

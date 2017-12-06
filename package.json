@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/AzidoGroup/scrilio-api#readme",
   "dependencies": {
+    "basic-auth": "^2.0.0",
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
-    "express-mysql-session": "^1.2.3",
-    "express-session": "^1.15.6",
     "is_js": "^0.9.0",
     "joi": "^13.0.2",
     "knex": "^0.14.2",

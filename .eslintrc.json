@@ -77,18 +77,6 @@
 			}
 		],
 
-		"jsdoc/check-param-names": 1,
-
-		"jsdoc/check-tag-names": 1,
-
-		"jsdoc/check-types": 1,
-
-		"jsdoc/newline-after-description": 1,
-
-		"jsdoc/require-description-complete-sentence": 0,
-
-		"jsdoc/require-hyphen-before-param-description": 0,
-
 		"key-spacing": [
 			"error",
 			{
@@ -183,29 +171,9 @@
 
 		"prefer-template": "error",
 
-		"promise/always-return": "off",
-
-		"promise/catch-or-return": "off",
-
-		"promise/no-return-wrap": "error",
-
-		"promise/param-names": "error",
-
 		"quote-props": [
 			"error",
 			"as-needed"
-		],
-
-		"require-jsdoc": [
-			"error",
-			{
-				"require": {
-					"FunctionDeclaration": true,
-					"MethodDefinition": true,
-					"ClassDeclaration": false,
-					"ArrowFunctionExpression": false
-				}
-			}
 		],
 
 		"quotes": [
@@ -262,11 +230,5 @@
 		]
 	},
 
-	"settings": {
-		"jsdoc": {
-			"tagNamePreference": {
-				"returns": "return"
-			}
-		}
-	}
+	"settings": {}
 }
