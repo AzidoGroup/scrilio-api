@@ -15,6 +15,7 @@ module.exports = (app, config) => {
 	});
 
 	require('./api/v1')(v1, config);
+	require('./api/v1/sites')(v1, config);
 
 	app.use(v1);
 
