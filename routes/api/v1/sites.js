@@ -24,6 +24,7 @@ module.exports = (router, config) => {
 		let query = helper.parseQuerystring(request.query);
 		let limit = helper.parseLimit(request.query.limit);
 		let offset = helper.parseOffset(request.query.offset);
+		// let sort = helper.parseSort(request.query.sort);
 
 		return Sites.fetch(query, limit, offset)
 			.then(results => {
