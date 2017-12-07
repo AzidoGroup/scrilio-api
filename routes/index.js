@@ -6,7 +6,6 @@ module.exports = (app, config) => {
 	let v1 = express.Router();
 	v1.use('/api', (request, response, next) => {
 		let user = basicAuth(request);
-		console.log(user, config.application.auth);
 		if (user && user.name === config.application.auth.username && user.pass === config.application.auth.password) {
 			return next();
 		}
