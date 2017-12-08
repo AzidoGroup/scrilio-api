@@ -14,7 +14,7 @@
     "api"
   ],
   "author": "",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/AzidoGroup/scrilio-api/issues"
   },
@@ -32,7 +32,8 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "eslint": "^4.12.1",
-    "eslint-plugin-jsdoc": "^3.2.0"
+    "eslint": "^4.x",
+    "eslint-config-azido": "1.x",
+    "eslint-plugin-jsdoc": "3.x"
   }
 }
