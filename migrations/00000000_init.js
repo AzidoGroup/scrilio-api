@@ -1,7 +1,8 @@
 'use strict';
 
 const config = require('../config').database;
-const siteHelper = require('../lib/helpers/sites-helper');
+const {ENUMS: SITE_ENUMS} = require('../lib/helpers/sites-helper');
+const {ENUMS: MODEL_ENUMS} = require('../lib/helpers/models-helper');
 
 exports.up = knex => {
 	return knex.schema
@@ -12,7 +13,7 @@ exports.up = knex => {
 			table.string('display', 255).notNullable();
 			table.string('metaDescription', 255).nullable();
 			table.text('description', 'text').nullable();
-			table.enu('status', siteHelper.ENUMS.STATUS).notNullable().defaultTo(siteHelper.ENUMS.STATUS[0]);
+			table.enu('status', SITE_ENUMS.STATUS).notNullable().defaultTo(SITE_ENUMS.STATUS[0]);
 			table.index('status', 'status_index');
 			table.timestamp('created').defaultTo(knex.fn.now());
 			table.timestamp('modified').defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
@@ -29,11 +30,21 @@ exports.up = knex => {
 			table.foreign('siteId').references('id').inTable(`${config.prefix}sites`);
 			table.timestamp('created').defaultTo(knex.fn.now());
 			table.timestamp('modified').defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+		})
+		.createTableIfNotExists(`${config.prefix}models`, table => {
+			table.increments('id').primary();
+			table.string('name', 255).notNullable();
+			table.string('display', 255).notNullable();
+			table.enu('status', MODEL_ENUMS.STATUS).defaultTo(MODEL_ENUMS.STATUS[0]);
+			table.text('bio').nullable();
+			table.timestamp('created').defaultTo(knex.fn.now());
+			table.timestamp('modified').defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
 		});
 };
 
 exports.down = knex => {
 	return knex.schema
 		.dropTable(`${config.prefix}sites`)
-		.dropTable(`${config.prefix}scenes`);
+		.dropTable(`${config.prefix}scenes`)
+		.dropTable(`${config.prefix}models`);
 };

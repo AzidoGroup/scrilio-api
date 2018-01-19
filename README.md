@@ -7,6 +7,11 @@
 npm install
 ```
 
+## Testing
+```bash
+npm test
+```
+
 ## Install the database and tables
 
 ### MySQL dependency
@@ -34,6 +39,7 @@ exit
 ```
 npm start
 ```
+
 
 ## create the admin user
 * go to `http://localhost:3000/admin/setup`

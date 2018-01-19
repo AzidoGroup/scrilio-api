@@ -2,6 +2,7 @@
 
 const is = require('is_js');
 const helper = require('../../../lib/helpers/sites-helper');
+const common = require('../../../lib/helpers/common-helper');
 
 let Sites;
 
@@ -22,9 +23,9 @@ module.exports = (router, config) => {
 	 */
 	function fetch(request, response) {
 		let query = helper.parseQuerystring(request.query);
-		let limit = helper.parseLimit(request.query.limit);
-		let offset = helper.parseOffset(request.query.offset);
-		let orderBy = helper.parseOrderBy(request.query.orderBy);
+		let limit = common.parseLimit(request.query.limit);
+		let offset = common.parseOffset(request.query.offset);
+		let orderBy = common.parseOrderBy(request.query.orderBy);
 
 		return Sites.fetch(query, limit, offset, orderBy)
 			.then(results => {
